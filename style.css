@@ -1,0 +1,292 @@
+body{
+  margin:0;
+
+}
+section{
+    background-color:white;
+}
+body{
+   background-color:black;
+}
+section{
+   display:flex;
+   align-content:center;
+}
+a{
+    cursor: pointer;
+}
+.main-header{
+     width:100%;
+     height:60px;
+     background-color:#1e1e1e;
+     display:flex;
+     justify-content: space-between;
+     padding-right:65px;
+     top:0;    
+}
+.header-logo {
+    width: fit-content;
+    height:100%;
+    background-color:#1e1e1e;
+    display:flex;
+    justify-content: space-between;
+}
+.header-nav{
+    width: fit-content;
+    height:100%;
+    background-color:#1e1e1e; 
+    position: relative;
+    left:90px;
+}
+.header-nav ul {
+    list-style:none;         
+}
+.header-nav ul li{
+      display:inline-flex;
+      float:left;  
+      padding-right:0px;
+} 
+.header-nav ul li a{
+    margin-left: 20px;
+    line-height:50px;
+    font-family:cursive;
+    color:white;
+    text-decoration: none;
+}
+.header-nav ul li a:hover{
+    color:orangered;
+}
+.cox{
+    background-color: orangered;
+    color: black;
+    padding: 10px;
+    position:absolute;
+    right:0;
+    width:300px;
+    height:40px;
+}
+.cox-firstbox{
+    background-color:white;
+    left:0;
+    width:15px;
+    height:220px;
+}
+.cox-secondbox{
+    width:80px;
+    height:270px;
+    position:absolute;
+    right:0;
+    background-color: orangered;
+    z-index: 2;
+}
+.overlay p{
+    padding-left: 70px;
+    font-size: 18px;
+}
+.button{
+    background-color:orangered;
+    border: none;
+    color: white;
+    padding:15px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left:90px;
+    margin-top:9px;
+    cursor: pointer;
+}
+h1{
+    font-size:45px;
+    font-weight: 700;
+    font-family:monospace;
+    padding-left:90px;
+    text-shadow: 500px;
+    color:white;   
+}
+    /*ABOUT.HTML*/
+.container-skill,#skills{
+    display :block;
+}   
+ #skills p{margin-bottom: 15px;}
+#team{
+    flex-direction: column;
+   
+}
+#team p{
+    margin-bottom:10px;
+}
+#services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; 
+}
+#services h2{
+    margin-bottom: 20px;
+}
+
+ .team-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.team-member {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+}
+
+.team-member .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-member:hover .overlay {
+    opacity: 1;
+}
+
+.team-member .overlay a {
+    background-color: #ff6f00;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.team-member .overlay a:hover {
+    background-color: #ff9f40;
+}
+
+.member-info {
+    padding: 20px;
+}
+
+.member-info h3 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.member-info p {
+    font-size: 16px;
+    color: #555;
+}
+footer{
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    height: 50px;
+    line-height: 5px;
+  }     
+  .footer-menu {
+    list-style-type: none;
+    display: inline-flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  .footer-menu li {
+    margin: 0 15px;
+  }
+  .footer-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px; 
+   
+  }
+  .footer-menu a:hover {
+    color: #ffa500;
+  }
+   html {
+    scroll-behavior: smooth;
+  }
+  .slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slides {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.left-text {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 40px;
+    z-index: 2;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.scroll-down i {
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+.scroll-down i {
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+   
