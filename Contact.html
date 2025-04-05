@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Masters-Contact</title>
+    <link rel="stylesheet" href="Home.html">
+    <link rel="stylesheet" href="About.html">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+   
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+header {
+    background-color: #262626;
+    color: #f57b23;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 {
+    font-size: 24px;
+    margin-left: 15px;
+}
+header nav {
+    display: flex;
+    gap: 20px;
+    margin-right: 15px;
+}
+header nav a:hover{
+    color:orangered;
+    
+}
+header a {
+    color: white;
+    text-decoration: none;
+    font-family: cursive;
+}
+.container {
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+
+.contact-details {
+    width: 30%;
+    background-color: #1e1e1e;
+    padding: 20px;
+    z-index: 999;
+    position: relative;
+}
+
+.contact-details h2 {
+    margin-bottom: 20px;
+    color: #f57b23;
+}
+
+.contact-details p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.contact-details button {
+    background-color: #f57b23;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#map {
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+
+.sidebar-icons {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    background-color: transparent;
+    z-index: 1000;
+}
+
+.sidebar-icons a {
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #2b2b2b;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.sidebar-icons a:hover {
+    background-color: #f57b23;
+}
+.flip-card {
+      background-color: transparent;
+      width: 300px;
+      height: 300px;
+      perspective: 1000px;
+      position :absolute;
+      left:100px;
+      top:50px;
+      z-index: 5;
+}
+.flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+     transform-style: preserve-3d;
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-front {
+      background-color: black;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+}
+
+.flip-card-back {
+       background-color: black;
+       color: white;
+       transform: rotateY(180deg);
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       padding: 20px;
+}
+
+button {
+      background-color: orangered;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+}
+
+input, textarea {
+width: 100%;
+padding: 10px;
+margin: 10px 0;
+border-radius: 5px;
+border: none;
+}   
+
+
+</style>
+    </head>
+    <body>
+        <header>
+            <h1>Code Masters</h1>
+            <nav>
+                <a href="Home.html">Home</a>
+                <a href="About.html">About</a>
+            </nav>
+
+        </header>
+    
+        <div class="container">
+           
+            <div class="sidebar-icons">
+                <a href="https://www.facebook.com/code.masters.320042?mibextid=rS40aB7S9Ucbxw6v"><i class="fa fa-facebook"></i></a>
+                <a href="https://x.com/CodeMaster30680?t=EXREDTzz8TLIQ_ZVoNSK0Q&s=09"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.instagram.com/codemasters012/"><i class="fa fa-instagram"></i></a>
+            </div>
+    
+            
+            <div class="flip-card">
+                <div class="flip-card-inner" id="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h2>Contact Details</h2> <br>
+                        <p>Email: info@codemasters.com</p> <br>
+                        <p>Phone: +27 81 824 8979</p> <br>
+                        <button id="flipButton">Send a Message</button>
+                    </div>
+                    <div class="flip-card-back">
+                        <form id="contactForm">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Email Address" required>
+                            <textarea name="message" placeholder="Your Message" required></textarea>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+              
+            <script>
+                document.getElementById("flipButton").addEventListener("click", function() {
+                    document.getElementById("flip-card-inner").style.transform = "rotateY(180deg)";
+                });
+            </script>      
+    
+           
+            <div id="map"></div>
+        </div>
+    
+        
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <script>
+            var map = L.map('map').setView([-29.1194, 26.2246], 16);
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>',
+                subdomains: 'abcd',
+                maxZoom: 19
+            }).addTo(map);
+            var marker = L.marker([-29.1194, 26.2246]).addTo(map);
+            marker.bindPopup("<b>Central University of Techology</b><br>20 President Street, Bloemfontein").openPopup();
+        </script>
+    </body>
+    </html>
+    

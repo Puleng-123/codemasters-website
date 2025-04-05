@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Masters-Member</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  
+  <link rel="stylesheet" href="css/reset.css">
+  <style>
+    body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header h2 {
+            font-size: 1.5em;
+            color: #555;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #1e1e1e;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .social-icons a:hover {
+            color: orangered; 
+        }
+
+        .section {
+            margin-top: 40px;
+        }
+
+        .section h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ff9500;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .skills div {
+            width: 48%;
+            margin-bottom: 15px;
+        }
+
+        .progress-bar {
+            position: relative;
+            height: 20px;
+            background-color: #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            background-color: #ff9500;
+            width: 0;
+            border-radius: 10px;
+        }
+
+        .contact-info p {
+            font-size: 1.2em;
+        }
+
+        .contact-info a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #1e1e1e; 
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: orangered; 
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px; 
+        }
+
+        nav ul li {
+            display: inline;
+            font-family: cursive;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: orangered;
+        }
+      
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        Code Masters
+    </div>
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li> 
+            <li><a href="About.html">About</a></li> 
+            <li><a href="Contact.html">Contact</a></li>  
+        </ul>
+    </nav>
+</header>
+ 
+  <div class="container">
+    <div class="header">
+        <h1>Marate Nkagisang Pius</h1>
+        <h2>Web Developer at Code Masters</h2>
+    </div>
+
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/maratenkagisang" target="_blank">
+            <i class="fa fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://www.instagram.com/maratenkagisang" target="_blank">
+            <i class="fa fa-instagram"></i> Instagram
+        </a>
+        <a href="mailto:224017549@stud.cut.ac.za">
+            <i class="fa fa-envelope"></i> Email
+        </a>
+    </div>
+
+    <div class="section">
+        <h3>Part in Code Masters Web</h3>
+        <div class="skills">
+            <div>
+                <span>HTML/CSS HOME PAGE</span>
+                <div class="progress-bar">
+                    <div class="progress" data-percentage="50"></div>
+                </div>
+            </div>
+
+            <div>
+                <span>HTML/CSS ABOUT CODE MASTERS</span>
+                <div class="progress-bar">
+                    <div class="progress" data-percentage="5"></div>
+                </div>
+            </div>
+
+            <div>
+                <span>HTML/CSS CONTACT PAGE </span>
+                <div class="progress-bar">
+                    <div class="progress" data-percentage="35"></div>
+                </div>
+            </div>
+
+            <div>
+              <span>HTML/CSS CURRICULUM VITAE OF MARATE NKAGISANG PIUS</span>
+              <div class="progress-bar">
+                  <div class="progress" data-percentage="100"></div>
+              </div>
+          </div>
+    </div>
+
+    <div class="section">
+        <h3>Contact Information</h3>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:224017549@stud.cut.ac.za">224017549@stud.cut.ac.za</a></p><br>
+            <p>Phone: +27 81 824 8979</p> <br>
+            <p>Location: Bloemfontein, South Africa</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const progressBars = document.querySelectorAll(".progress");
+
+        progressBars.forEach((progress) => {
+            let percentage = parseInt(progress.getAttribute("data-percentage"));
+            let width = 1;
+            let interval = setInterval(() => {
+                if (width >= percentage) {
+                    clearInterval(interval);
+                } else {
+                    width++;
+                    progress.style.width = width + "%";
+                }
+            }, 20);
+        });
+    });
+</script>
+
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

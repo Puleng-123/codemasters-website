@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Masters-About</title>
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="Member1.html">
+  <link rel="stylesheet" href="Contact.html">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}    
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}  
+  
+  .about-header {
+    background-color:#1e1e1e;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    position: fixed;
+    width: 100%;
+    height:50px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}    
+.logo h1 {
+    padding-left: 0;
+    font-size: 35px;
+    line-height: 55px;
+    color:orangered;
+    text-transform: uppercase;
+
+} 
+nav {
+    flex-grow: 1;
+    text-align: center;
+}    
+.menu {
+    list-style-type: none;
+    display: inline-flex;
+}    
+.menu li {
+    margin:0 15px ;
+    font-family: cursive;
+   
+}    
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+  
+}    
+.menu a:hover {
+    color: orangered;
+ }
+      
+main {
+    margin-top: 100px;
+    padding: 20px;
+}    
+section {
+    margin: 50px 0;
+}
+ h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+#about{
+  display: flex;
+  flex-direction: column; 
+}
+#about h2{
+  top:0;
+  margin-bottom: 10px;
+}
+#about p{
+  margin-bottom:20px;
+  font-size: 15px;
+}
+.faint-line{    
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);  
+  margin: 20px 0;
+}    
+#about img{
+  position:relative;
+  width:370px;
+  height:300px;
+  padding-left: 10px;
+  padding-top:0;     
+}
+.border-heading{
+  position: relative; 
+   
+}
+.border-heading::before {
+  content: "";           
+  position: absolute;
+  top: 0;
+  left: 10%;
+  transform: translateX(-50%);
+  width: 400px;            
+  height: 5px;           
+  background-color: orangered;
+  }
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+.service-box {
+  background-color: #3a3a3a;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+}
+.service-box h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.icon {
+  font-size: 40px;
+  color: orange;
+}
+.details {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: orange;
+  margin-top: 10px;
+}
+.container {
+  display: flex;
+  gap: 20px;
+}
+.box {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.box:hover img {
+  transform: scale(1.1);
+}
+.box .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.box:hover .overlay {
+  opacity: 1;
+}
+.box a {
+  color: white;
+  text-decoration: none;
+}
+/*rating section*/
+.container-skill {
+    width: 80%;
+    
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.skill span {
+    font-size: 1.2em;
+}
+
+.progress-bar {
+    position: relative;
+    width: 60%;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 20px;
+}
+
+.progress {
+    height: 100%;
+    background-color: orangered;
+    width: 0;
+    border-radius: 10px;
+}
+
+.percentage {
+  font-size: 1.2em;
+}
+.header-box1{
+ width:230px;
+  height:55px;
+  background-color: orangered;
+  position:absolute;
+ right:0;
+ top:0;
+}
+.header-box2{
+  width:80px;
+  height:375px;
+  background-color: orangered;
+  position:absolute;
+  right:0;
+  top:0; 
+ }
+ 
+</style>
+</head>
+<body>
+  <header class="about-header">
+    <div class="logo">
+        <h1>Code Masters</h1>
+    </div>
+    <nav>
+        <ul class="menu">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="header-box1" ></div>
+    <div class="header-box2"></div>
+</header>
+<div class="slideshow-container">
+  <div class="left-text" style="font-size: 65px;"> <br>About - <br> Code Masters</div>
+
+  <img class="slides fade" src="./images/About-Image.jpg" alt="Image 1">
+  <img class="slides fade" src="./images/About-image1.jpg" alt="Image 2">
+  <img class="slides fade" src="./images/About-image2.jpeg" alt="Image 3">
+
+  <div class="scroll-down" onclick="scrollToSection()">
+      Scroll Down <i>&#x2193;</i>
+  </div>
+</div>
+
+
+
+<script>
+
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+      let slides = document.getElementsByClassName("slides");
+      for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 3000); 
+  }
+
+  
+  function scrollToSection() {
+      document.getElementById("content").scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+<main>
+  <section id="about">
+      <h2 class="border-heading"> Some Words About Us</h2>
+      <p>At Code Masters, we don’t just build websites – we create dynamic digital <br> experiences that elevate brands and connect with audiences. <br> Our passion is turning innovative ideas into powerful,  <br>custom-built solutions that drive business success.</p>
+      <hr class="faint-line">
+      <img src="./images/About-Code image.png" alt="picture">
+      <div class="inline-about">
+        <span style="position:absolute;right:180px;top:1050px;font-size: 20px;">Innovative solutions to boost your creative projects</span> 
+        <p style="position:absolute;right:90px;top:1090px;;">"At Code Masters, we believe in the power of innovation to fuel your creative projects. <br> With cutting-edge technology and expert solutions, we help bring your ideas to life—faster, <br> smarter, and more effectively. Whether you're building from scratch or enhancing  <br>your current projects, our team is here to unlock new possibilities, streamline your processes, <br> and turn your creative vision into reality. Let Code Masters be your partner in innovation,<br> delivering results that inspire and drive success."</p>
+      </div>
+  </section>
+
+  <section id="services">
+      <h2>Services</h2>
+      <div class="container" style="position:relative;margin-top:0;margin-left: 0;">
+        <div class="box">
+          <a href="Costs.html#web development">
+            <img src="./images/Web Development.png" alt="Web Development">
+            <div class="overlay">Web Development</div>
+          </a>
+        </div>
+        <div class="box">
+          <a href="Costs.html#trouble-shoot">
+            <img src="./images/trouble.png" alt="Trouble Shooting">
+            <div class="overlay">Trouble Shooting</div>
+          </a>
+        </div>
+        <div class="box">
+          <a href="Costs.html#software-development">
+            <img src="./images/software.png" alt="Software Development">
+            <div class="overlay">Software Development</div>
+          </a>
+        </div>
+      </div>
+  </section>
+
+  <section id="team">
+      <h2>Our Awesome Team</h2>
+      <p>Here is our creative and talented team who work behind the scenes to make things happen!</p>
+      <div class="team-section">
+        
+        <div class="team-member">
+            <img src="./images/Member 1.png" alt="motholo puleng">
+            <div class="overlay">
+                <a href="member1.html">Click to View</a>
+            </div>
+            <div class="member-info">
+                <h3>Motholo Puleng Mitchell</h3>
+                <p>Designer / Developer</p>
+            </div>
+        </div>
+    
+        
+        <div class="team-member">
+            <img src="./images/Member2.png" alt="marate nkagisang">
+            <div class="overlay">
+                <a href="Member2.html">Click to View</a>
+            </div>
+            <div class="member-info">
+                <h3>Marate Nkagisang</h3>
+                <p>Designer </p>
+            </div>
+        </div>
+    </div>
+    
+  </section>
+
+  <section id="skills">
+      <h2>Our Skills</h2>
+      <p>Details about our skills and expertise.</p>
+      
+      <div class="container-skill">
+      
+        <div class="skill">
+            <span>HTML/CSS</span>
+            <div class="progress-bar">
+                <div class="progress" data-percentage="99"></div>
+            </div>
+            <span class="percentage">99%</span>
+        </div>
+
+        <div class="skill">
+            <span>C++</span>
+            <div class="progress-bar">
+                <div class="progress" data-percentage="55"></div>
+            </div>
+            <span class="percentage">55%</span>
+        </div>
+
+        <div class="skill">
+            <span>PHP</span>
+            <div class="progress-bar">
+                <div class="progress" data-percentage="70"></div>
+            </div>
+            <span class="percentage">70%</span>
+        </div>
+
+        <div class="skill">
+            <span>C#</span>
+            <div class="progress-bar">
+                <div class="progress" data-percentage="95"></div>
+            </div>
+            <span class="percentage">95%</span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const progressBars = document.querySelectorAll(".progress");
+
+            progressBars.forEach((progress) => {
+                let percentage = parseInt(progress.getAttribute("data-percentage"));
+                let width = 1;
+                let interval = setInterval(() => {
+                    if (width >= percentage) {
+                        clearInterval(interval);
+                    } else {
+                        width++;
+                        progress.style.width = width + "%";
+                    }
+                }, 20); 
+            });
+        });
+    </script>
+  </section>
+<footer>
+  <ul class="footer-menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#skills">Skills</a></li>
+  </ul>
+</footer>
+</body>
+</html>
